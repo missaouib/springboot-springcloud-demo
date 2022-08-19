@@ -1,0 +1,4 @@
+1、数据库ddl和dml脚本可放在resources及其子目录下即可，启动时DataSourceInitializerInvoker类会进行初始化
+2、初始化的数据源类型为HikariDataSource
+3、h2数据库查询时不能带数据库名称，如userdb.USER_MEM
+4、启动失败：先maven clean然后再maven install
