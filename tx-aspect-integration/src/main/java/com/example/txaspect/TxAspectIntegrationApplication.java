@@ -16,6 +16,7 @@ import org.springframework.boot.autoconfigure.web.servlet.ServletWebServerFactor
 import org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration;
 import org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext;
 import org.springframework.boot.web.servlet.server.ServletWebServerFactory;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.*;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -29,6 +30,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         /** 自定义组件 */UserController.class,UserService.class, AdviceAopOrderAspect.class
 })
 @EnableAspectJAutoProxy(exposeProxy = true)
+@EnableCaching
 //加载配置文件
 @PropertySource("application.properties")
 //加载mapper文件
