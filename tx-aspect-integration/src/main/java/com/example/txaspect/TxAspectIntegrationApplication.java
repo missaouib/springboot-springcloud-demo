@@ -30,7 +30,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
         /** 自定义组件 */UserController.class,UserService.class, AdviceAopOrderAspect.class
 })
 @EnableAspectJAutoProxy(exposeProxy = true)
-@EnableCaching
 //加载配置文件
 @PropertySource("application.properties")
 //加载mapper文件

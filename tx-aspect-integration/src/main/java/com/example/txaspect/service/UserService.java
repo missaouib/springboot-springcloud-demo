@@ -15,7 +15,6 @@ public class UserService {
     private UserMapper userMapper;
 
     @Transactional
-    @Cacheable
     public User getUser(User user) {
         return userMapper.getUser(user);
     }
