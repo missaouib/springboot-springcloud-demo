@@ -10,6 +10,7 @@
         <module name="tx-aspect-integration" />
         <module name="aop-aspect-order" />
         <module name="h2-mybatis" />
+        <module name="mockito" />
         <module name="springboot-springcloud-demo" />
       </profile>
     </annotationProcessing>
@@ -18,6 +19,7 @@
       <module name="h2-mybatis" target="1.8" />
       <module name="h2-mybatis-more1" target="1.8" />
       <module name="h2-mybatis-more1 (1)" target="1.8" />
+      <module name="mockito" target="1.8" />
       <module name="springboot-springcloud-demo" target="1.8" />
       <module name="tx-aspect-integration" target="1.8" />
     </bytecodeTargetLevel>
@@ -28,6 +30,7 @@
       <module name="h2-mybatis" options="-parameters" />
       <module name="h2-mybatis-more1" options="-parameters" />
       <module name="h2-mybatis-more1 (1)" options="-parameters" />
+      <module name="mockito" options="-parameters" />
       <module name="springboot-springcloud-demo" options="-parameters" />
       <module name="tx-aspect-integration" options="-parameters" />
     </option>

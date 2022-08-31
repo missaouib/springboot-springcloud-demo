@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/h2-mybatis/pom.xml" />
         <option value="$PROJECT_DIR$/aop-aspect-order/pom.xml" />
         <option value="$PROJECT_DIR$/tx-aspect-integration/pom.xml" />
+        <option value="$PROJECT_DIR$/mockito/pom.xml" />
       </list>
     </option>
   </component>
