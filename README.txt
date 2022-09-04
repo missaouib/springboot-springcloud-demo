@@ -7,3 +7,6 @@
 4、mockito
 该项目是模拟测试类，具体代码在mockito/src/test/java/com/example/mockito目录中
 注意事项：在Mockito中打桩（即stub)有两种方法when(...).thenReturn(...)和doReturn(...).when(...)。这两个方法在大部分情况下都是可以相互替换的，但是在使用了Spies对象（@Spy注解），而不是mock对象（@Mock注解)的情况下他们调用的结果是不相同的（目前我只知道这一种情况，可能还有别的情形下是不能相互替换的）
+5、i18n
+5.1 DynamicResourceMessageSource类是动态监听文件变化
+5.2 MessageFormatDemo类是MessageFormat的代码示例应用
