@@ -1,3 +1,10 @@
 # Project exclude paths
 /target/
-/.idea/
+/target
+/*.settings
+/*.idea
+/*.log
+/*.zip
+/*.iml
+/*.log.zip
+/*.txt
