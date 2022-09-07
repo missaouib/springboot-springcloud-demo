@@ -10,3 +10,4 @@
 5、i18n
 5.1 DynamicResourceMessageSource类是动态监听文件变化
 5.2 MessageFormatDemo类是MessageFormat的代码示例应用
+6、full-project-integration项目是整合了controller、service、mapper简单流程的项目
