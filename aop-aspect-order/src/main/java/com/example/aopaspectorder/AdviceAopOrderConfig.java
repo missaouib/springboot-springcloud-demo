@@ -10,7 +10,7 @@ public class AdviceAopOrderConfig {
 
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext();
-        context.register(AdviceAopOrderConfig.class, AdviceAopOrderAspect2.class,AdviceAopOrderAspect.class, AdviceAopService.class);
+        context.register(AdviceAopOrderConfig.class, AdviceAopOrderAspect.class,AdviceAopOrderAspect.class, AdviceAopService.class);
         context.refresh();
 
         AdviceAopService adviceAopService = context.getBean(AdviceAopService.class);
