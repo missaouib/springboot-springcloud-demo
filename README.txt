@@ -11,3 +11,4 @@
 5.1 DynamicResourceMessageSource类是动态监听文件变化
 5.2 MessageFormatDemo类是MessageFormat的代码示例应用
 6、full-project-integration项目是整合了controller、service、mapper简单流程的项目
+7、mysql_xa项目根据XA规范实现了分布式事务，mysql客户端充当TM事务管理器的角色
