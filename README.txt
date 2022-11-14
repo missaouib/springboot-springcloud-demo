@@ -12,4 +12,5 @@
 5.2 MessageFormatDemo类是MessageFormat的代码示例应用
 6、full-project-integration项目是整合了controller、service、mapper简单流程的项目
 7、mysql_xa项目根据mysql原始api实现了分布式事务，mysql客户端充当TM事务管理器的角色
-6、druid-jta-atomikos项目整合了druid、jta、atomikos，实现了单系统跨多库的分布式事务
+8、druid-jta-atomikos项目整合了druid、jta、atomikos，实现了单系统跨多库的分布式事务
+9、common-utils项目整合了常用的工具类
