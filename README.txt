@@ -14,3 +14,13 @@
 7、mysql_xa项目根据mysql原始api实现了分布式事务，mysql客户端充当TM事务管理器的角色
 8、druid-jta-atomikos项目整合了druid、jta、atomikos，实现了单系统跨多库的分布式事务
 9、common-utils项目整合了常用的工具类
+10、nio-demo项目演示了Java NIO的用法，包括ByteBuffer、channel、Selector
+11、netty-demo项目整合了netty多个使用案例
+    11.1 manual-rpc演示了手写rpc
+    11.2 sticky项目演示了粘包拆包
+       11.2.1 com.example.sticky.demo1目录的案例演示了粘包拆包现象
+       11.2.2 针对demo1的粘包拆包现象，解决方案有：LineBasedFrameDecoder(行分隔解码器)、DelimiterBasedFrameDecoder(符号分隔解码器)、FixedLengthFrameDecoder(定长分隔解码器)
+       11.2.3 com.example.sticky.demo2目录的案例解决了demo1目录的粘包拆包现象
+12、websocket项目整合了与websocket相关的案例
+    12.1 websocket-simple项目演示了websocket的简单应用
+    12.2 websocket-push项目根据websocket-simple项目进行了应用，实现了push消息推送
