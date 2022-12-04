@@ -24,3 +24,9 @@
 12、websocket项目整合了与websocket相关的案例
     12.1 websocket-simple项目演示了websocket的简单应用
     12.2 websocket-push项目根据websocket-simple项目进行了应用，实现了push消息推送
+
+13、kafka-demo项目演示了kafka生产和消费消息
+
+14、rocketmq-demo项目演示了rocketmq生产和消费消息
+
+15、docker-images-demo项目演示了通过docker插件构建镜像并推送到阿里云镜像服务

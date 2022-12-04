@@ -1,0 +1,32 @@
+1、在Linux上修改docker配置
+   1.1、修改宿主机的broker配置，让其broker服务可以远程访问，暴露的docker服务端口号2375
+   vim /lib/systemd/system/docker.service
+   1.2、在ExecStart= 后面添加配置
+   -H tcp://0.0.0.0:2375 -H unix:///var/run/docker.sock
+   1.3 重载资源并重新启动docker
+      1.3.1 systemctl daemon-reload
+      1.3.2 systemctl restart docker
+   1.4 验证是否生效
+   浏览器上访问地址：http://192.168.3.57:2375/version
+
+
+2、登录阿里云镜像服务控制台，手动创建命名空间以及仓库名称
+访问地址：https://cr.console.aliyun.com/cn-hangzhou/instance/repositories
+
+
+3、在docker-images-demo/pom.xml加入docker-maven-plugin插件并新增如下重要配置
+<settings>
+    <servers>
+        <server>
+            <!--maven的pom中可以根据这个id找到这个server节点的配置-->
+            <id>docker-aliyun</id>
+            <!--阿里云注册的账号-->
+            <username>xjq111006</username>
+            <password>xjq111006</password>
+        </server>
+    </servers>
+</settings>
+
+
+4、在docker-images-demo目录下打开Terminal，输入如下命令
+mvn clean package docker:build -DpushImage -DskipTests
