@@ -32,3 +32,5 @@
 15、docker-images-demo项目演示了通过docker插件构建镜像并推送到阿里云镜像服务
 
 16、dockerfile-demo项目演示了通过编写Dockerfile文件构建镜像并推送到阿里云镜像服务
+
+17、rabbitmq-demo项目演示了rabbitmq生产和消费消息
