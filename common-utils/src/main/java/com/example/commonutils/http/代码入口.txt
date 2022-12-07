@@ -1,0 +1,7 @@
+1、nacos-client-2.0.4.jar
+代码类：com.alibaba.nacos.common.http.client.NacosRestTemplate
+
+
+2、github nacos项目的nacos-config子项目
+代码类：com.alibaba.nacos.config.server.service.LongPollingService
+http长连接的原理：客户端发起请求到服务端，服务端开启后台线程等待10s或30s，如果期间数据发生变化则返回结果给客户端，否则超时后返回结果

@@ -34,3 +34,5 @@
 16、dockerfile-demo项目演示了通过编写Dockerfile文件构建镜像并推送到阿里云镜像服务
 
 17、rabbitmq-demo项目演示了rabbitmq生产和消费消息
+
+18、jmh-maven项目演示了如何使用jmh进行基准测试以及如何通过jar包启动
