@@ -36,3 +36,5 @@
 17、rabbitmq-demo项目演示了rabbitmq生产和消费消息
 
 18、jmh-maven项目演示了如何使用jmh进行基准测试以及如何通过jar包启动
+
+19、disruptor-demo项目使用disruptor框架演示了单生产者单消费者、演示了多生产者多消费者
