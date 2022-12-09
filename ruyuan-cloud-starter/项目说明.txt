@@ -1,0 +1,7 @@
+1、复制项目时java文件夹出现sources root的解决办法
+在复制项目的java目录和resource目录分别右击选择Mark Diretory as====>java目录选择Sources Root、resource目录Resources Root
+然后打开File====>Project Structure...====>选择复制的项目====>在右边删除不属于复制项目的java目录、resource目录
+
+
+2、出现jar包标红，但是maven本地仓库存在此jar包
+解决办法：在maven本地仓库删除此jar包，重新下载

@@ -38,3 +38,11 @@
 18、jmh-maven项目演示了如何使用jmh进行基准测试以及如何通过jar包启动
 
 19、disruptor-demo项目使用disruptor框架演示了单生产者单消费者、演示了多生产者多消费者
+
+20、ruyuan-cloud-starter项目自动装配了如下组件
+kafka与rocketmq
+Redis与ZK分布式锁，其中redis包括单机、主从、哨兵、集群
+阿里云和腾讯云的短信接口
+邮件发送
+easypoi excel组件
+elasticsearch和mybatis-plus

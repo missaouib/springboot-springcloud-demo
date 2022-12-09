@@ -1,0 +1,7 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    com.ruyuan.cloud.lock.configuration.DistributedLockAutoConfiguration, \
+    com.ruyuan.cloud.sms.configuration.SmsAutoConfiguration, \
+    com.ruyuan.cloud.es.configuration.ElasticsearchAutoConfiguration, \
+    com.ruyuan.cloud.mq.configuration.MessageQueueAutoConfiguration, \
+    com.ruyuan.cloud.mail.configuration.MailAutoConfiguration, \
+    com.ruyuan.cloud.excel.configuration.EasyPoiAutoConfiguration
