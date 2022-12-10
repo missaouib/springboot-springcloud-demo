@@ -1,0 +1,5 @@
+1、时间窗口算法的实现请参考sentinel的相关代码
+com.alibaba.csp.sentinel.slots.block.flow.FlowRuleChecker
+com.alibaba.csp.sentinel.slots.block.flow.controller.DefaultController
+com.alibaba.csp.sentinel.node.StatisticNode
+com.alibaba.csp.sentinel.slots.statistic.base.LeapArray

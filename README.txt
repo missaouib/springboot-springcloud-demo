@@ -46,3 +46,6 @@ Redis与ZK分布式锁，其中redis包括单机、主从、哨兵、集群
 邮件发送
 easypoi excel组件
 elasticsearch和mybatis-plus
+
+
+21、sentinel-sliding-window-demo项目演示了滑动时间窗算法的用法
