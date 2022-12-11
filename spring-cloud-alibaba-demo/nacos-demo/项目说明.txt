@@ -1,0 +1,28 @@
+1、nacos-server的下载地址
+https://github.com/alibaba/nacos/releases/tag/2.1.2
+
+
+2、在D:\ChromeCoreDownloads\nacos-server-2.1.2\nacos\conf目录下的application.properties文件新增如下内容：
+# 配置数据库持久化
+spring.datasource.platform=mysql
+db.num=1
+db.url.0=jdbc:mysql://192.168.3.57:3306/nacos_config?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&autoReconnectForPools=true&serverTimezone=Asia/Shanghai&connectTimeout=10000&socketTimeout=30000
+db.user=root
+db.password=123456
+
+
+3、在D:\ChromeCoreDownloads\nacos-server-2.1.2\nacos\bin目录下执行命令
+startup.cmd -m standalone
+
+
+4、发现报错：Caused by: java.lang.IllegalStateException: No DataSource set
+4.1 检查是否已在mysql中创建了nacos_config数据库以及相关的表
+建库建表github地址：https://github.com/alibaba/nacos/blob/master/config/src/main/resources/META-INF/nacos-db.sql
+4.2 检查mysql的root用户的权限
+USE mysql;
+# 查看当前用户的权限
+select host,user from user;
+# 如果发现root的host不为%，则修改root用户权限
+update user set host='%' where user='root';
+# 刷新权限
+flush privileges;

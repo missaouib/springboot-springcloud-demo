@@ -1,0 +1,14 @@
+1、spring-cloud-gateway-demo项目包含如下项目
+cloud-eureka-server7001：作为服务注册中心
+cloud-provider-payment8001：作为服务提供者，可启动多个实例用于演示请求负载均衡
+cloud-gateway-gateway9527：作为网关路由
+
+
+2、cloud-provider-payment8001项目数据库初始化
+在mysql中执行src/main/resources/db/db2019.sql的sql脚本
+
+
+3、cloud-gateway-gateway9527的注意事项
+pom.xml文件中必须去掉如下依赖
+spring-boot-starter-web
+spring-boot-starter-actuator

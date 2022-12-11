@@ -49,3 +49,22 @@ elasticsearch和mybatis-plus
 
 
 21、sentinel-sliding-window-demo项目演示了滑动时间窗算法的用法
+
+
+22、gateway-demo项目主要是演示网关相关的功能
+      spring-cloud-gateway-demo项目主要演示spring-cloud-gateway的功能
+          cloud-eureka-server7001：作为服务注册中心
+          cloud-provider-payment8001：作为服务提供者，可启动多个实例用于演示请求负载均衡
+          cloud-gateway-gateway9527：作为网关路由
+
+
+23、spring-cloud-alibaba-demo项目主要演示跟spring-cloud-alibaba相关的功能
+      nacos-demo项目主要演示跟nacos相关的功能
+          config-demo：作为配置中心
+          discovery-provider-consumer：作为服务注册中心和服务发现中心
+              consumer-demo：作为服务发现者
+              provider-demo：作为服务提供者
+          sentinel-nacos-demo：演示了sentinel的功能，并且和nacos进行了整合
+      spring-cloud-stream-demo项目主要演示跟spring-cloud-stream相关的功能
+          cloud-stream-rabbitmq-consumer8802：作为消息消费者
+          cloud-stream-rabbitmq-provider8801：作为消息生产者
