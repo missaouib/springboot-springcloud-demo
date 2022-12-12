@@ -68,3 +68,6 @@ elasticsearch和mybatis-plus
       spring-cloud-stream-demo项目主要演示跟spring-cloud-stream相关的功能
           cloud-stream-rabbitmq-consumer8802：作为消息消费者
           cloud-stream-rabbitmq-provider8801：作为消息生产者
+
+
+24、spring-webFlux-demo项目演示了spring-webFlux的基本使用
