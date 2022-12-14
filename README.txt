@@ -80,3 +80,6 @@ elasticsearch和mybatis-plus
       linkhashmap-softreference：基于LinkedHashMap和SoftReference实现LRU缓存淘汰
       linklist-lru：基于LinkedList实现LRU缓存淘汰
       caffeine：caffeine cache的基本使用
+
+
+26、https-demo项目演示了如何使用spring boot搭建https网站

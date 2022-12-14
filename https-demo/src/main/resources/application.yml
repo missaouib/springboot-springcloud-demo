@@ -1,0 +1,10 @@
+# 配置 HTTPS 相关信息
+server:
+  port: 443
+  http-port: 80 # 为了后面的配置使用，暂时无用
+  ssl:
+    enabled: true
+    key-store: classpath:tomcat_https.keystore # 证书文件
+    key-password: 123456  # 密码
+    key-store-type: JKS # 密钥库类型
+    key-alias: tomcat_https
