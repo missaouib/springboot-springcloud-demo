@@ -1,0 +1,4 @@
+1、Caffeine是基于Google Guava Cache设计经验上改进的成果，是使用jdk 1.8对Guava cache的重写版本，基于LRU算法实现，支持多种缓存过期策略。
+
+
+2、博客参考地址：https://blog.csdn.net/qq_27098537/article/details/122849257

@@ -71,3 +71,12 @@ elasticsearch和mybatis-plus
 
 
 24、spring-webFlux-demo项目演示了spring-webFlux的基本使用
+
+
+
+25、cache-demo项目演示了跟缓存相关的使用
+      ehcache：ehcache的基本使用
+      guava：guava cache的基本使用
+      linkhashmap-softreference：基于LinkedHashMap和SoftReference实现LRU缓存淘汰
+      linklist-lru：基于LinkedList实现LRU缓存淘汰
+      caffeine：caffeine cache的基本使用
