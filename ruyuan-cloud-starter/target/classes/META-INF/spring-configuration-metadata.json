@@ -191,8 +191,38 @@
       "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
     },
     {
+      "name": "ruyuan.mq.kafka.enable-consumer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
+    },
+    {
+      "name": "ruyuan.mq.kafka.enable-consumer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
+    },
+    {
       "name": "ruyuan.mq.kafka.enable-producer",
       "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
+    },
+    {
+      "name": "ruyuan.mq.kafka.enable-producer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
+    },
+    {
+      "name": "ruyuan.mq.kafka.enable-producer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
+    },
+    {
+      "name": "ruyuan.mq.kafka.server",
+      "type": "java.lang.String",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
+    },
+    {
+      "name": "ruyuan.mq.kafka.server",
+      "type": "java.lang.String",
       "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$Kafka"
     },
     {
@@ -206,6 +236,26 @@
       "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
     },
     {
+      "name": "ruyuan.mq.rocketmq.enable-consumer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.enable-consumer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.enable-producer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.enable-producer",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
+    },
+    {
       "name": "ruyuan.mq.rocketmq.enable-producer",
       "type": "java.lang.Boolean",
       "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
@@ -215,6 +265,28 @@
       "type": "java.lang.String",
       "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ",
       "defaultValue": "ruyuan-cloud-group"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.producer-group",
+      "type": "java.lang.String",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ",
+      "defaultValue": "ruyuan-cloud-group"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.producer-group",
+      "type": "java.lang.String",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ",
+      "defaultValue": "ruyuan-cloud-group"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.server",
+      "type": "java.lang.String",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
+    },
+    {
+      "name": "ruyuan.mq.rocketmq.server",
+      "type": "java.lang.String",
+      "sourceType": "com.ruyuan.cloud.mq.properties.MessageQueueProperties$RocketMQ"
     },
     {
       "name": "ruyuan.mq.rocketmq.server",

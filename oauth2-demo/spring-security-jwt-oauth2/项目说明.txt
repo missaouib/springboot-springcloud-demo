@@ -1,0 +1,16 @@
+1、打开git bash使用keytool工具
+   1.1 生成证书
+   keytool -genkeypair -alias jwt123 -keyalg RSA -keypass jwt123 -keystore jwt.jks -storepass jwt123
+   1.2 导出公钥
+   keytool -list -rfc --keystore jwt.jks  | openssl x509 -inform pem -pubkey
+   1.3 复制公钥并添加到public.cert文件中
+   1.4 导出私钥
+      1.4.1 openssl pkcs12 -in jwt.p12 -out jwt.pem -passin pass:jwt123 -passout pass:jwt123
+      1.4.2 用文本方式打开jwt.pem并复制私钥
+
+2、在线RSA公钥私钥对校验
+http://www.metools.info/code/c83.html
+
+
+3、jwt token验证
+https://jwt.io/#debugger-io

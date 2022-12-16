@@ -83,3 +83,14 @@ elasticsearch和mybatis-plus
 
 
 26、https-demo项目演示了如何使用spring boot搭建https网站
+
+
+27、oauth2-demo项目演示了如何使用oauth2
+      oauth2-redis：oauth2跟redis整合，仅限于password模式，也提供了注销token的方法
+      spring-security-jwt-oauth2：spring-security、jwt、oauth2三方整合，提供了四种授权模式的基本使用
+          springsecurity101-cloud-oauth2-server：授权服务器
+          springsecurity101-cloud-oauth2-userservice：受保护资源
+          springsecurity101-cloud-oauth2-client：第三方应用程序
+
+    token 过期后，如何自动续期：https://cloud.tencent.com/developer/article/2001607
+
