@@ -94,3 +94,5 @@ elasticsearch和mybatis-plus
 
     token 过期后，如何自动续期：https://cloud.tencent.com/developer/article/2001607
 
+
+28、mysql-deadlock项目演示了mysql死锁的场景
