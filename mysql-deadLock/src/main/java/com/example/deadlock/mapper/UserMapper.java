@@ -2,6 +2,7 @@ package com.example.deadlock.mapper;
 
 import com.example.deadlock.model.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Map;
 
@@ -13,7 +14,7 @@ public interface UserMapper {
 
     Map<String,Object> getDeadLock();
 
-    int update1();
+    int update1(@Param("username") String username);
 
-    int update3();
+    int update3(@Param("username") String username);
 }

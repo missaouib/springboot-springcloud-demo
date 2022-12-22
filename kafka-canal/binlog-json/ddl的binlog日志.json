@@ -1,0 +1,15 @@
+{
+  "data": null,
+  "database": "test",
+  "es": 1671707600000,
+  "id": 8,
+  "isDdl": true,
+  "mysqlType": null,
+  "old": null,
+  "pkNames": null,
+  "sql": "ALTER TABLE `test`.`t_user` \r\nADD COLUMN `create_time` datetime NULL AFTER `username`",
+  "sqlType": null,
+  "table": "t_user",
+  "ts": 1671707600350,
+  "type": "ALTER"
+}

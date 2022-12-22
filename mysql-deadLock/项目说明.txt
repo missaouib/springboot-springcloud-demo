@@ -1,0 +1,32 @@
+1、如何查看死锁日志
+   1.1 直接使用 show engine innodb status 命令获取死锁信息，但是该命令只能获取最近一次的死锁信息
+   1.2 MySQL 提供了一个系统参数 innodb_print_all_deadlocks 专门用于记录死锁日志，当发生死锁时，死锁日志会记录到 MySQL 的错误日志文件中
+
+   博客参考地址：https://cloud.tencent.com/developer/article/1722416
+
+
+2、使用mysqlbinlog解析binlog
+/usr/bin/mysqlbinlog \
+--base64-output=decode-rows -v \
+--database=test \
+--start-datetime='2022-12-22 20:07:00' \
+--stop-datetime='2022-12-22 20:07:10' \
+/var/lib/mysql/mysql-bin.000004 \
+temp.sql
+
+
+3、使用binlog2sql解析binlog
+    3.1 binlog2sql的安装及使用
+    wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+    rpm -ivh epel-release-latest-7.noarch.rpm
+
+    yum -y install git python-pip
+
+    git clone http://github.com/danfengcao/binlog2sql.git && cd binlog2sql
+
+    pip install -r requirements.txt
+
+    python /root/binlog2sql/binlog2sql/binlog2sql.py -h192.168.3.57 -P3306 -uroot -p123456 -d test -t t_user --start-file=mysql-bin.000001 > parseBinlog.sql
+
+    博客参考地址：https://blog.csdn.net/fy_1852003327/article/details/105907402

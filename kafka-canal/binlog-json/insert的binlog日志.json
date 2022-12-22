@@ -1,0 +1,24 @@
+{
+  "data": [{
+    "id": "8",
+    "username": "8"
+  }],
+  "database": "test",
+  "es": 1671705853000,
+  "id": 4,
+  "isDdl": false,
+  "mysqlType": {
+    "id": "bigint(20)",
+    "username": "varchar(255)"
+  },
+  "old": null,
+  "pkNames": ["id"],
+  "sql": "",
+  "sqlType": {
+    "id": -5,
+    "username": 12
+  },
+  "table": "t_user",
+  "ts": 1671705854006,
+  "type": "INSERT"
+}

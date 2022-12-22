@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Map;
+import java.util.Random;
+import java.util.UUID;
 
 @Service
 public class UserService {
@@ -51,11 +53,11 @@ public class UserService {
         try {
             User user = userMapper.getUser(new User());
             System.out.println(user);
-            int update1 = userMapper.update1();
-            System.out.println("update1:"+update1);
+            int update1 = userMapper.update1(UUID.randomUUID().toString());
+            System.out.println("tx1 update1:"+update1);
             Thread.sleep(200L);
-            int update3 = userMapper.update3();
-            System.out.println("update3:"+update3);
+            int update3 = userMapper.update3(UUID.randomUUID().toString());
+            System.out.println("tx1 update3:"+update3);
         } catch (Exception e) {
             Map<String, Object> map = getDeadLock();
             System.out.println("tx1==============:"+map.get("Status"));
@@ -67,11 +69,11 @@ public class UserService {
     public void tx2() {
         try {
             Thread.sleep(100L);
-            int update3 = userMapper.update3();
-            System.out.println("update3:"+update3);
+            int update3 = userMapper.update3(UUID.randomUUID().toString());
+            System.out.println("tx2 update3:"+update3);
             Thread.sleep(300L);
-            int update1 = userMapper.update1();
-            System.out.println("update1:"+update1);
+            int update1 = userMapper.update1(UUID.randomUUID().toString());
+            System.out.println("tx2 update1:"+update1);
         } catch (Exception e) {
             Map<String, Object> map = getDeadLock();
             System.out.println("tx2==============:"+map.get("Status"));

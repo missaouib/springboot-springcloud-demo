@@ -1,0 +1,49 @@
+1、mysql开启binlog
+   1.1 在/etc/mysql/mysql.conf.d/mysqld.cnf配置文件中配置如下内容：
+    log-bin=/var/lib/mysql/mysql-bin
+    server-id=1
+    binlog_format=row
+    # 指定具体要同步的数据库，如果不配置则表示所有数据库均开启binlog
+    binlog-do-db=test
+   1.2 验证binlog是否开启
+   show variables like "%log_bin%";
+
+
+2、docker安装canal
+    拉取镜像
+    docker pull canal/canal-server
+
+    启动容器
+    docker run --name canal -d canal/canal-server
+
+    复制目录
+    docker cp canal:/home/admin/canal-server/conf/canal.properties /root/canal/
+    docker cp canal:/home/admin/canal-server/conf/example/instance.properties /root/canal/
+
+    启动canal
+    docker run --name canal -d canal/canal-server
+
+    2.1 修改/root/canal/canal.properties配置文件
+    canal.serverMode = kafka
+    kafka.bootstrap.servers = 192.168.3.57:9092
+    2.2 修改/root/canal/instance.properties配置文件
+    canal.instance.mysql.slaveId=20
+    canal.instance.master.address=192.168.3.57:3306
+    canal.instance.dbUsername=root
+    canal.instance.dbPassword=123456
+    canal.mq.topic=test
+
+
+    重新启动canal
+    docker run --name canal -p 11111:11111 -d \
+    -v /root/canal/instance.properties:/home/admin/canal-server/conf/example/instance.properties \
+    -v /root/canal/canal.properties:/home/admin/canal-server/conf/canal.properties \
+    canal/canal-server
+
+    博客参考地址：https://www.jianshu.com/p/4bc8a923b0d9
+
+3、canal同步binlog报错
+com.alibaba.otter.canal.parse.exception.PositionNotFoundException: can't find start position for example
+2022-12-22 16:24:27.624 [destination = example , address = /192.168.3.57:3306 , EventParser] ERROR com.alibaba.otter.canal.common.alarm.LogAlarmHandler - destination:example[com.alibaba.otter.canal.parse.exception.PositionNotFoundException: can't find start position for example
+
+解决方案：mysqld.cnf的server-id不能设置为0

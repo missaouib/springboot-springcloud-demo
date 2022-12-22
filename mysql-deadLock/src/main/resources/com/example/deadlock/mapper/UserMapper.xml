@@ -13,11 +13,11 @@
     </select>
 
     <update id="update1">
-        update t_user set id = 1 where id = 1
+        update t_user set username = #{username} where id = 1
     </update>
 
     <update id="update3">
-        update t_user set id = 3 where id = 3
+        update t_user set username = #{username} where id = 3
     </update>
 
 </mapper>

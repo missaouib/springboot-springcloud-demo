@@ -1,32 +1,42 @@
-package com.example.kafkademo;
+package com.example.kafkacanal;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
+import ch.qos.logback.classic.Level;
+import ch.qos.logback.classic.LoggerContext;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.impl.StaticLoggerBinder;
 
-import java.lang.reflect.Array;
-import java.lang.reflect.Executable;
 import java.util.Arrays;
 import java.util.Properties;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 public class ConsumerDemo {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(ConsumerDemo.class);
+
+    private static final LoggerContext defaultLoggerContext = (LoggerContext)StaticLoggerBinder.getSingleton().getLoggerFactory();
+
+    static {
+        //修改日志级别
+        defaultLoggerContext.getLogger(Logger.ROOT_LOGGER_NAME).setLevel(Level.INFO);
+    }
 
     public static void main(String[] args) {
         KafkaConsumer<String,String> consumer = createConsumer();
         consumer.subscribe(Arrays.asList("test"));
 
-        try {
-            ConsumerRecords<String,String> records = consumer.poll(Integer.MAX_VALUE);
-            for (ConsumerRecord<String,String> record : records) {
-                System.out.println(record.value());
+        while(true) {
+            try {
+                ConsumerRecords<String,String> records = consumer.poll(Integer.MAX_VALUE);
+                for (ConsumerRecord<String,String> record : records) {
+                    System.out.println(record.value());
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+                consumer.close();
             }
-        } catch (Exception e) {
-            e.printStackTrace();
-            consumer.close();
         }
     }
 

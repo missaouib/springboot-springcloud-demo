@@ -45,7 +45,7 @@ public class ProducerDemo {
     private static KafkaProducer<String,String> createKafkaProducer() {
         Properties props = new Properties();
 
-        props.put("bootstrap.servers","localhost:9092");
+        props.put("bootstrap.servers","192.168.3.57:9092");
         props.put("key.serializer","org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer","org.apache.kafka.common.serialization.StringSerializer");
         props.put("buffer.memory",67108864);
