@@ -96,3 +96,9 @@ elasticsearch和mybatis-plus
 
 
 28、mysql-deadlock项目演示了mysql死锁的场景
+
+
+29、kafka-canal项目演示了如何使用canal和kafka解析binlog日志
+
+
+30、wechat-public-dailyhub项目演示了如何扫码登录微信公众号

@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://119.45.25.164/dailyhub?useSSL=false&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: admin
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  freemarker:
+    suffix: .ftl
+    settings:
+      classic_compatible: true
+  redis:
+    database: 0
+    port: 6379
+    password:
+    host: localhost
+  elasticsearch:
+    uris: 119.45.25.164:9200
+    username:
+    password:
+wechat:
+  mpAppId: wxf58aec861085f7d5
+  mpAppSecret: efacfe9b7c1bb3d341721e0530bfc954
+  token: 111111111
+server:
+  domain: http://yimin.natapp1.cc
