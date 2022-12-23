@@ -1,6 +1,10 @@
 1、如何查看死锁日志
    1.1 直接使用 show engine innodb status 命令获取死锁信息，但是该命令只能获取最近一次的死锁信息
    1.2 MySQL 提供了一个系统参数 innodb_print_all_deadlocks 专门用于记录死锁日志，当发生死锁时，死锁日志会记录到 MySQL 的错误日志文件中
+   show variables like "%innodb_print_all_deadlocks%";
+
+   set global innodb_print_all_deadlocks = 1;
+
 
    博客参考地址：https://cloud.tencent.com/developer/article/1722416
 
