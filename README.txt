@@ -102,3 +102,6 @@ elasticsearch和mybatis-plus
 
 
 30、wechat-public-dailyhub项目演示了如何扫码登录微信公众号
+
+
+31、tx-propagation项目演示了事务传播行为

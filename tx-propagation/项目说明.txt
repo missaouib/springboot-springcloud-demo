@@ -1,0 +1,27 @@
+1、配置说明
+# 更新脚本
+spring.jpa.hibernate.ddl-auto=update
+# 定义自动化脚本的 DML 脚本
+spring.datasource.schema=classpath*:db/schema.sql
+# 定义自动化脚本的 DDL 脚本
+spring.datasource.data=classpath*:db/data.sql
+# 初始化模式,先改为always，启动成功后改为never
+spring.datasource.initialization-mode=never
+
+
+2、测试事务说明
+   2.1 当一个类的Propagation.REQUIRED事务方法调用另一个类的Propagation.REQUIRED事务方法，
+   二者同属于一个事务，无论谁抛出异常都会回滚
+
+   2.2 当一个类的Propagation.REQUIRED事务方法调用另一个类的Propagation.NESTED事务方法，
+       二者同属于一个事务，分别为主事务和嵌套事务
+
+   NESTED申明在被调用方法上，若调用者方法有开启事务。此时NESTED会开始一个 "嵌套的" 事务，
+   它是已经存在事务的一个真正的子事务。
+   嵌套事务开始执行时， 它将取得一个 savepoint。 如果这个嵌套事务失败， 我们将回滚到此 savepoint。
+   嵌套事务是外部事务的一部分, 只有外部事务结束后它才会被提交。
+
+   NESTED的回滚特性：
+       主事务和嵌套事务属于同一个事务
+       嵌套事务出错回滚不会影响到主事务
+       主事务回滚会将嵌套事务一起回滚了
