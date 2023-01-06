@@ -1,0 +1,11 @@
+C:\Users\Administrator>jmap -histo 48804
+
+ num     #instances         #bytes  class name
+----------------------------------------------
+   1:           222        8709448  [B
+   2:           185         465392  [I
+   3:          2736         382472  [C
+   4:           544          62400  java.lang.Class
+   5:          2593          62232  java.lang.String
+   6:           615          36384  [Ljava.lang.Object;
+   7:           791          31640  java.util.TreeMap$Entry

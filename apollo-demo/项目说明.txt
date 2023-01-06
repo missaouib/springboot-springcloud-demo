@@ -1,0 +1,47 @@
+1、docker搭建apollo
+    1.1 在mysql中执行apolloconfigdb.sql和apolloportaldb.sql
+    其中需要修改apolloconfigdb.sql中的ServerConfig表的eureka.service.url
+
+    1.2 创建docker容器
+    docker pull apolloconfig/apollo-configservice
+    docker pull apolloconfig/apollo-adminservice
+    docker pull apolloconfig/apollo-portal
+
+
+    docker run -d -p 8081:8080 \
+    -v /tmp/logs:/opt/logs \
+    --name apollo-configservice \
+    -e SPRING_DATASOURCE_URL="jdbc:mysql://192.168.3.57:3306/ApolloConfigDB?characterEncoding=utf8" \
+    -e SPRING_DATASOURCE_USERNAME=root \
+    -e SPRING_DATASOURCE_PASSWORD=123456 \
+    -e eureka.instance.home-page-url=http://192.168.3.57:8081 \(解决长轮询超时问题)
+    apolloconfig/apollo-configservice
+
+
+
+    docker run -p 8091:8090 \
+    -e SPRING_DATASOURCE_URL="jdbc:mysql://192.168.3.57:3306/ApolloConfigDB?characterEncoding=utf8" \
+    -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=123456 \
+    -e eureka.instance.home-page-url=http://192.168.3.57:8091 \(解决长轮询超时问题)
+    -d -v /tmp/logs:/opt/logs \
+    --name apollo-adminservice  \
+    apolloconfig/apollo-adminservice
+
+
+    docker run -p 8071:8070 \
+    -e SPRING_DATASOURCE_URL="jdbc:mysql://192.168.3.57:3306/ApolloPortalDB?characterEncoding=utf8" \
+    -e SPRING_DATASOURCE_USERNAME=root -e SPRING_DATASOURCE_PASSWORD=123456 \
+    -e APOLLO_PORTAL_ENVS=dev \
+    -e DEV_META=http://192.168.3.57:8081 \
+    -d -v /tmp/logs:/opt/logs \
+    --name apollo-portal \
+    apolloconfig/apollo-portal
+
+
+    博客参考地址：
+    1、使用docker快速安装apollo配置中心：https://blog.csdn.net/kk3909/article/details/111937957
+    2、网络策略：https://github.com/apolloconfig/apollo/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97
+
+
+
+2、使用用户名/密码 apollo/admin访问http://192.168.3.57:8071
