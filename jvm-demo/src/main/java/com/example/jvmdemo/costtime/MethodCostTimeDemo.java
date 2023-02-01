@@ -3,7 +3,7 @@ package com.example.jvmdemo.costtime;
 import java.util.Random;
 
 /**
- * 方法调用耗时分析测试
+ * 方法调用耗时分析测试，使用jvisualvm工具查看
  */
 public class MethodCostTimeDemo {
 

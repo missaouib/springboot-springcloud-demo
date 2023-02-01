@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,15 +19,21 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @Value("${java.io.tmpdir:-/tmp}")
-    private String logFile;
 
     @RequestMapping("/user/get")
     public User getUser(@RequestBody User user) {
         User result = userService.getUser(user);
-        LOGGER.info("logFile:{}",logFile);
+        LOGGER.info("logFile:{}","ss");
         LOGGER.info("hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
         LOGGER.info("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         return result;
+    }
+
+    public void createPrototype() {
+        User user1 = userService.getUser(new User());
+        User user2 = userService.getUser(new User());
+
+        System.out.println(user1);
+
     }
 }

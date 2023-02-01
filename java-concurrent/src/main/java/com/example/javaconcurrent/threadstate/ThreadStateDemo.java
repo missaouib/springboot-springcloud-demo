@@ -1,5 +1,8 @@
 package com.example.javaconcurrent.threadstate;
 
+/**
+ * 测试线程的BLOCKED状态
+ */
 public class ThreadStateDemo {
 
     public static void main(String[] args) {
