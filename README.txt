@@ -125,3 +125,13 @@ elasticsearch和mybatis-plus
 
 
 37、only-mybatis-demo项目演示了如何仅应用mybatis查询数据库
+
+
+38、dubbo-demo项目演示了dubbo如何使用
+      gmall-interface：通用接口
+      only-dubbo：演示了如何简单使用dubbo
+           user-service-provider：服务提供者
+           order-service-consumer：服务消费者
+      springboot-dubbo：演示了springboot整合dubbo
+           boot-user-service-provider：服务提供者
+           boot-order-service-consumer：服务消费者
