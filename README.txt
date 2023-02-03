@@ -122,3 +122,6 @@ elasticsearch和mybatis-plus
 
 
 36、algorithm项目演示了数据结构与算法
+
+
+37、only-mybatis-demo项目演示了如何仅应用mybatis查询数据库
