@@ -135,3 +135,6 @@ elasticsearch和mybatis-plus
       springboot-dubbo：演示了springboot整合dubbo
            boot-user-service-provider：服务提供者
            boot-order-service-consumer：服务消费者
+
+
+39、oracle-mybatis项目演示了如何整合oracle并实现简单查询
